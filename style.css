@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    line-height: 25px;
+    color: #697C9A;
+    background-color: #F6F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 60%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+}
+
+header a{
+    color: #697C9A;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header a:hover{
+    filter: brightness(50%)
+}
+
+header span{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+header img{
+    vertical-align: text-top;
+}
+
+form{
+    margin-bottom: 3%;
+    border-radius: 15px;
+    padding: 1% 0 1% 3%;
+    background-color: #fefefe;
+    position: relative;
+    box-shadow: 2px 10px 10px lightgray;
+}
+
+#search{
+    width: 75%;
+    display: inline-block;
+    padding: 2%;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background-color: transparent;
+}
+
+label img{
+    vertical-align: text-bottom;
+}
+
+#search-button{
+    width: 18%;
+    padding: 1% 3%;
+    color: #fefefe;
+    background-color: #0079FF;
+    border: none;
+    border-radius: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 33px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search-button:hover{
+    background-color: #0077ffa6;
+}
+
+.no-results{
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    color: red;
+}
+
+section{
+    padding: 5%;
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-shadow: 2px 10px 10px lightgray;
+}
+
+aside{
+    float: left;
+    height: 25em;
+    margin-right: 5%;
+}
+
+.avatar{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+}
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+h1{
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #2B3442;
+}
+
+.login{
+    color: #0079FF;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 2%;
+}
+
+.bio{
+    margin: 2% 0;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.repo-followers-following{
+    display: flex;
+    background-color: #F6F8FF;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.repo-followers-following div{
+    flex-basis: 30%;
+}
+
+h4{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.info p{
+    flex-basis: 50%;
+    margin-bottom: 2%;
+    color: #4B6A9B;
+}
+
+.info a{
+    text-decoration: none;
+    color: #4B6A9B;
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+.unavailable{
+    opacity: 0.5;
+}
+
+.unavailable-a{
+    cursor: not-allowed;
+    text-decoration: none !important;
+}
+
+.body-dark{
+    background-color: #141D2F;
+    color: #fff;
+}
+
+.white{
+    color: #fff !important;
+}
+
+.shadow{
+    box-shadow: none;
+}
+
+.form-section{
+    background-color: #1E2A47;
+}
+
+/* Laptop */
+@media screen and (min-width: 1001px) and (max-width: 1300px){
+    .container{
+        width: 70%;
+    }
+    
+    #search{
+        width: 75%;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 80%;
+    }
+
+    #search{
+        width: 70%;
+    }
+
+    aside{
+        width: 15vw;
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .user-info{
+        flex-direction: column;
+    }
+    .bio{
+        clear: both;
+        margin: 5% 0;
+    }
+
+    .info{
+        margin-top: 5%;
+    }
+
+    .no-results{
+        top: 30%;
+        left: 60%;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 600px){
+    body{
+        font-size: 12px;
+    }
+    .container{
+        width: 90%;
+    }
+
+    #search{
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #search-button{
+        width: 25%;
+    }
+
+    .bio{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .repo-followers-following{
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+
+    .info p{
+        margin-bottom: 4%;
+    }
+
+    .info p:nth-child(1){
+        order: 0;
+    }
+
+    .info p:nth-child(2){
+        order: 2;
+    }
+
+    .info p:nth-child(3){
+        order: 1;
+    }
+
+    .info p:nth-child(4){
+        order: 3;
+    }
+
+    .no-results{
+        top: -50%;
+        left: 50%;
+    }
+}
+
