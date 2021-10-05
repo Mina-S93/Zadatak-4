@@ -51,6 +51,32 @@ mode.addEventListener("click", () => {
 	}
 });
 
+//prefers-color-scheme
+const userPrefersDark =
+	window.matchMedia &&
+	window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if (userPrefersDark) {
+	console.log("User prefers a dark interface");
+	modeName.innerText = "LIGHT";
+	modeImg.src = "starter-code/assets/icon-sun.svg";
+	section.classList.add("form-section");
+	section.classList.add("shadow");
+	form.classList.add("form-section");
+	form.classList.add("shadow");
+	h1.classList.add("white");
+	username.classList.add("white");
+	body.classList.add("body-dark");
+	mode.classList.add("white");
+	search.classList.add("white");
+	rff.classList.add("body-dark");
+	repos.classList.add("white");
+	followers.classList.add("white");
+	following.classList.add("white");
+	infoP.forEach((p) => p.classList.add("white"));
+	infoA.forEach((a) => a.classList.add("white"));
+}
+
 //Request
 let userData = async (user) => {
 	let response = await fetch(`https://api.github.com/users/${user}`);
