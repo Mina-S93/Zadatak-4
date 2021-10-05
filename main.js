@@ -155,7 +155,10 @@ userData("octocat")
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	user = form.search.value.trim();
-	userData(user)
-		.then((data) => implementingUserData(data))
-		.catch((reason) => console.log(reason.message));
+	console.log(user);
+	if (user != "") {
+		userData(user)
+			.then((data) => implementingUserData(data))
+			.catch((reason) => console.log(reason.message));
+	}
 });
