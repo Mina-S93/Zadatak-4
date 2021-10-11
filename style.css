@@ -189,21 +189,71 @@ h4{
     text-decoration: none !important;
 }
 
-.body-dark{
+.light #dark-mode{
+    display: none;
+}
+
+.dark #light-mode{
+    display: none;
+}
+
+.dark{
     background-color: #141D2F;
     color: #fff;
 }
 
-.white{
-    color: #fff !important;
-}
-
-.shadow{
+.dark section{
+    background-color: #1E2A47;
     box-shadow: none;
 }
 
-.form-section{
+.dark form{
     background-color: #1E2A47;
+    box-shadow: none;
+}
+
+.dark #dark-mode{
+    display: block;
+}
+
+.dark h1{
+    color: #fff !important;
+}
+
+.dark .username{
+    color: #fff !important;
+}
+
+.dark .mode{
+    color: #fff !important;
+}
+
+.dark #search{
+    color: #fff !important;
+}
+
+.dark .repo-followers-following{
+    background-color: #1E2A47;
+}
+
+.dark .repos{
+    color: #fff !important;
+}
+
+.dark .followers{
+    color: #fff !important;
+}
+
+.dark .following{
+    color: #fff !important;
+}
+
+.dark .info p{
+    color: #fff !important;
+}
+
+.dark .info a{
+    color: #fff !important;
 }
 
 /* Laptop */

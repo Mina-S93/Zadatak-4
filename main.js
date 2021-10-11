@@ -11,44 +11,19 @@ let twitter = document.querySelector(".twitter");
 let website = document.querySelector(".website");
 let company = document.querySelector(".company");
 let error = document.createElement("span");
-let mode = document.querySelector(".mode");
 let avatar = document.querySelector(".avatar");
 let body = document.querySelector("body");
-let modeName = document.querySelector(".mode span");
-let modeImg = document.querySelector(".mode img");
-let h1 = document.querySelector("h1");
-let section = document.querySelector("section");
-let search = document.querySelector("#search");
-let rff = document.querySelector(".repo-followers-following");
-let infoP = document.querySelectorAll(".info p");
-let infoA = document.querySelectorAll(".info a");
 let user;
 
-//Light - Dark Mode
-mode.addEventListener("click", () => {
-	section.classList.toggle("form-section");
-	section.classList.toggle("shadow");
-	form.classList.toggle("form-section");
-	form.classList.toggle("shadow");
-	h1.classList.toggle("white");
-	username.classList.toggle("white");
-	body.classList.toggle("body-dark");
-	mode.classList.toggle("white");
-	search.classList.toggle("white");
-	rff.classList.toggle("body-dark");
-	repos.classList.toggle("white");
-	followers.classList.toggle("white");
-	following.classList.toggle("white");
-	infoP.forEach((p) => p.classList.toggle("white"));
-	infoA.forEach((a) => a.classList.toggle("white"));
+let lightMode = document.querySelector("#light-mode");
+let darkMode = document.querySelector("#dark-mode");
 
-	if (body.classList.contains("body-dark")) {
-		modeName.innerText = "LIGHT";
-		modeImg.src = "starter-code/assets/icon-sun.svg";
-	} else {
-		modeName.innerText = "DARK";
-		modeImg.src = "starter-code/assets/icon-moon.svg";
-	}
+lightMode.addEventListener("click", () => {
+	body.classList.replace("light", "dark");
+});
+
+darkMode.addEventListener("click", () => {
+	body.classList.replace("dark", "light");
 });
 
 //prefers-color-scheme
@@ -57,24 +32,7 @@ const userPrefersDark =
 	window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 if (userPrefersDark) {
-	console.log("User prefers a dark interface");
-	modeName.innerText = "LIGHT";
-	modeImg.src = "starter-code/assets/icon-sun.svg";
-	section.classList.add("form-section");
-	section.classList.add("shadow");
-	form.classList.add("form-section");
-	form.classList.add("shadow");
-	h1.classList.add("white");
-	username.classList.add("white");
-	body.classList.add("body-dark");
-	mode.classList.add("white");
-	search.classList.add("white");
-	rff.classList.add("body-dark");
-	repos.classList.add("white");
-	followers.classList.add("white");
-	following.classList.add("white");
-	infoP.forEach((p) => p.classList.add("white"));
-	infoA.forEach((a) => a.classList.add("white"));
+	body.classList.replace("light", "dark");
 }
 
 //Request
